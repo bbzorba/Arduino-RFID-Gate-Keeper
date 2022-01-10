@@ -11,8 +11,6 @@ MFRC522 nfc(SAD, RST);
 void setup() {
   pinMode(5,OUTPUT);
   pinMode(6,OUTPUT);
-  pinMode(11,OUTPUT);
-  digitalWrite(11,LOW);
   digitalWrite(5,LOW);
   digitalWrite(6,LOW);
   
@@ -112,9 +110,6 @@ void loop() {
     else
     {
       Serial.println("ACCESS DENIED");
-      digitalWrite(11,HIGH);
-      delay(2000);
-      digitalWrite(11,LOW);
     }
 
     nfc.haltTag();
